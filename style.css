@@ -198,7 +198,7 @@ nav ul li a:hover::after{
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
 .mission{
-	font-size: 3rem;
+	font-size: 2rem;
 	font-family:'Times New Roman', Times, serif ;
 	font-weight: 600;
 	max-width: 720px;
@@ -206,6 +206,8 @@ nav ul li a:hover::after{
 	color: wheat;
 	/* border: 2px white solid; */
 	padding: 0.8rem;
+	text-align: center;
+	margin: auto;
 }
 
 .button{
