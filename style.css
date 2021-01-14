@@ -1,0 +1,299 @@
+/* this all is styling for the whole website in general. */
+
+body{
+  background-color: black;
+  color: white;
+  padding: 0.2rem;
+  max-width: 80%;
+  margin: auto;
+  padding-bottom: 3rem;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html{
+	font-size: 10px;
+	font-family: "Roboto Cn", sans-serif;
+}
+
+/* From here, is the styling done for navigation bar. all links and sliders included */
+
+a{
+	text-decoration: none;
+	color: #eee;
+}
+
+header{
+	width: 100%;
+	height: 100vh;
+	background: linear-gradient(to bottom, rgba(0,0,0,.8), rgba(0,0,0,.5)), 
+	url("images used/BOWE\ 1-1.png") center repeat;
+	background-size: cover;
+	position: relative;
+  overflow: hidden;
+}
+
+.container{
+	max-width: 120rem;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.menu-toggle{
+	position: fixed;
+	top: 2.5rem;
+	right: 2.5rem;
+	color: #eeeeee;
+	font-size: 3rem;
+	cursor: pointer;
+	z-index: 1000;
+	display: none;
+}
+
+nav{
+	padding-top: 5rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	text-transform: uppercase;
+	font-size: 1.6rem;
+}
+
+.brand{
+	font-size: 3rem;
+	font-weight: 300;
+	transform: translateY(-100rem);
+	animation: slideIn .6s forwards;
+}
+
+nav ul{
+	display: flex;
+}
+
+nav ul li{
+	list-style: none;
+	transform: translateY(-100rem);
+	animation: slideIn .6s forwards;
+}
+
+nav ul li:nth-child(1){
+	animation-delay: 0s;
+}
+
+nav ul li:nth-child(2){
+	animation-delay: .3s;
+}
+
+nav ul li:nth-child(3){
+	animation-delay: 0.6s;
+}
+
+nav ul li:nth-child(4){
+	animation-delay: 0.9s;
+}
+
+nav ul li a{
+	padding: 1rem 0;
+	margin: 0 3rem;
+	position: relative;
+	letter-spacing: 2px;
+}
+
+
+
+nav ul li a::before,
+nav ul li a::after{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	background-color: white;
+	left: 0;
+	transform: scaleX(0);
+	transition: all .5s;
+}
+
+nav ul li a::before{
+	top: 0;
+	transform-origin: bottom;
+}
+
+nav ul li a::after{
+	bottom: 0;
+	transform-origin: top;
+}
+
+.overlay{
+	background-color: rgba(0,0,0,.95);
+	position: fixed;
+	right: 0;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	transition: opacity 650ms;
+	transform: scale(0);
+	opacity: 0;
+  display: none;
+}
+
+nav ul li a:hover::before,
+nav ul li a:hover::after{
+	transform: scaleX(1);
+}
+
+@keyframes slideIn {
+	from{
+
+	}
+	to{
+		transform: translateX(0);
+	}
+}
+
+@media screen and (max-width: 700px){
+
+	.menu-toggle{
+		display: block;
+	}
+
+	nav{
+		padding-top: 0;
+		display: none;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+		height: 100vh;
+		text-align: center;
+	}
+
+	nav ul{
+		flex-direction: column;
+	}
+
+	nav ul li{
+		margin-top: 5rem;
+	}
+
+	nav ul li a{
+		margin: 0;
+		font-size: 2.5rem;
+	}
+
+	.brand{
+		font-size: 5rem;
+	}
+  
+  .overlay.menu-open,
+  nav.menu-open{
+	  display: flex;
+	  transform: scale(1);
+	  opacity: 1;
+  }
+  
+}
+
+/* Fromm here, we are starting with the main body  */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+.mission{
+	font-size: 4rem;
+	font-family:'Times New Roman', Times, serif ;
+	font-weight: 600;
+	max-width: 720px;
+	width: 100%;
+	color: wheat;
+	/* border: 2px white solid; */
+	padding: 0.8rem;
+}
+
+.button{
+	font-size: 2rem;
+	padding: 1rem;
+	border: 2px white solid;
+	background-color: black;
+	border-radius: 1rem;
+	color: white;
+	cursor: pointer;
+}
+
+.services{
+	padding-bottom: 15rem;
+}
+
+
+.list_of_services{
+	list-style: none;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+.child{
+	font-size: 2rem;
+	background-color: black;
+	flex: 1 1 200px;
+	margin: 1rem;
+	padding: 1.5rem;
+	border: white 2px solid;
+	text-align: center;
+}
+
+.child h2{
+	font-size: 2rem;
+	color: wheat;
+	font-weight: 600;
+	padding-bottom: 1rem;
+} 
+
+.image{
+	width: 150px;
+	height: 100px;	
+}
+
+.form_stud{
+	max-width: 720px;
+	width: 100%;
+	margin: auto;
+}
+
+.formitems{
+width: 100%;
+padding: 1rem ;
+margin: 2px 0;
+box-sizing: border-box;
+border:1px solid white;
+background-color:black;
+color: white;
+font-size: 2rem;
+}
+
+h1{
+	padding: 0.3rem;
+	text-align: center; 
+	font-size: 4rem; 	
+}
+
+.clients{
+	font-size: 2rem;
+}
+
+.leftali{
+	text-align: left;
+	border: white 2px solid;
+	padding: 2rem;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;	
+}
+
+footer{
+	font-size: 2.5rem;
+	font-family:Verdana, Geneva, Tahoma, sans-serif;
+	text-align: center;
+	letter-spacing: 0.1rem;
+	line-height: 3.4rem;
+}
