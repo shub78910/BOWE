@@ -8,7 +8,8 @@ body{
   background-color: black;
   color: white;
   padding: 0.2rem;
-  max-width: 90%;
+  max-width:300px;
+  width: 100%;
   margin: auto;
   padding-bottom: 3rem;
 }
